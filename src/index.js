@@ -8,16 +8,16 @@ const clearAll = document.querySelector('.clear-all');
 
 add.addEventListener('submit', (e) => {
   e.preventDefault();
-  const setindex = (UI.getlist()).length + 1;
+  const setindex = (UI.getList()).length + 1;
   const input = listinput.value;
   const mylist = new List(input, false, setindex);
-  UI.listlibrary(mylist);
-  UI.addtodo(mylist);
+  UI.listLibrary(mylist);
+  UI.addTodo(mylist);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  UI.displaylist();
-  UI.getlist();
+  UI.displayList();
+  UI.getList();
 });
 
 clearAll.onclick = () => {

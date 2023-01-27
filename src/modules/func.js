@@ -3,7 +3,7 @@ import edit from './editable.js';
 import isCompleted from './completed.js';
 
 export default class UI {
-  static getlist () {
+  static getList () {
     let tasks;
     if (localStorage.getItem('items') === null) {
       tasks = [];
@@ -13,18 +13,18 @@ export default class UI {
     return tasks;
   }
 
-  static addtodo  (element)  {
-    const todos = this.getlist();
+  static addTodo  (element)  {
+    const todos = this.getList();
     todos.push(element);
     localStorage.setItem('items', JSON.stringify(todos));
   }
 
-  static displaylist () {
-    const todos = this.getlist();
-    todos.forEach((element) => this.listlibrary(element));
+  static displayList () {
+    const todos = this.getList();
+    todos.forEach((element) => this.listLibrary(element));
   }
 
-  static listlibrary (element)  {
+  static listLibrary (element)  {
     const listcontainer = document.querySelector('.list-container');
 
     const list = document.createElement('div');
